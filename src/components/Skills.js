@@ -57,11 +57,11 @@ const Skills = () => {
   ];
 
   const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.4 }
     }
   };
 
@@ -75,7 +75,7 @@ const Skills = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5">Skills and Interests of Satyam Kumar Singh</div>
+          <div className="section-badge mb-5">Skills and Interests of Siddhartha Gupta</div>
           <div className="h-7"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ff9400' }}>Technical Domain and Interests</h2>
           <div className="h-10"></div>

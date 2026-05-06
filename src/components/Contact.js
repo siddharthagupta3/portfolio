@@ -49,11 +49,11 @@ const Contact = () => {
   };
 
   const fadeInUpVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1, 
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.4 }
     }
   };
 
@@ -61,20 +61,20 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      value: 'contact@example.com',
-      link: 'mailto:contact@example.com'
+      value: 'siddharthagupta617@gmail.com',
+      link: 'mailto:siddharthagupta617@gmail.com'
     },
     {
       icon: <FaPhone />,
       title: 'Phone',
-      value: '+1 (123) 456-7890',
-      link: 'tel:+11234567890'
+      value: '+91 98357 173XX',
+      link: 'tel:+9198357173XX'
     },
     {
       icon: <FaMapMarkerAlt />,
       title: 'Location',
-      value: 'New York, USA',
-      link: 'https://maps.google.com/?q=New+York'
+      value: 'Bihar, India',
+      link: 'https://maps.google.com/?q=Bihar+India'
     }
   ];
 
@@ -82,19 +82,19 @@ const Contact = () => {
     {
       icon: <FaLinkedin />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/siddharthagupta',
+      url: 'https://linkedin.com/in/siddharthagupta3',
       color: '#0077b5'
     },
     {
       icon: <FaInstagram />,
       name: 'Instagram',
-      url: 'https://instagram.com/siddharthagupta',
+      url: 'https://instagram.com/siddharthagupta3',
       color: '#e1306c'
     },
     {
       icon: <SiGmail />,
       name: 'Gmail',
-      url: 'mailto:siddharthagupta@gmail.com',
+      url: 'mailto:siddharthagupta617@gmail.com',
       color: '#ea4335'
     }
   ];
@@ -109,7 +109,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5">Contact Satyam Kumar Singh</div>
+          <div className="section-badge mb-5">Contact Siddhartha Gupta</div>
           <div className="h-7"></div>
           <h2 className="text-3xl md:text-4xl sm:text-2xl font-bold mb-6" style={{ color: 'var(--primary)' }}>Get In Touch</h2>
           <div className="h-7"></div>

@@ -29,42 +29,42 @@ const ConnectPage = () => {
     {
       icon: <FaInstagram />,
       name: 'Instagram',
-      url: 'https://instagram.com/satyamkumarsingh',
+      url: 'https://instagram.com/siddharthagupta3',
       color: '#e1306c',
       description: 'Follow me for behind-the-scenes and personal updates'
     },
     {
       icon: <FaLinkedin />,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/satyamkumarsingh',
+      url: 'https://linkedin.com/in/siddharthagupta3',
       color: '#0077b5',
       description: 'Connect with me professionally and see my work experience'
     },
     {
       icon: <FaGithub />,
       name: 'GitHub',
-      url: 'https://github.com/satyamkumarsingh',
+      url: 'https://github.com/siddharthagupta3',
       color: '#ffffff',
       description: 'Check out my code repositories and contributions'
     },
     {
       icon: <SiLeetcode />,
       name: 'LeetCode',
-      url: 'https://leetcode.com/satyamkumarsingh',
+      url: 'https://leetcode.com/siddharthagupta3',
       color: '#ffa116',
       description: 'View my problem-solving skills and coding challenges'
     },
     {
       icon: <FaHackerrank />,
       name: 'HackerRank',
-      url: 'https://hackerrank.com/satyamkumarsingh',
+      url: 'https://hackerrank.com/siddharthagupta3',
       color: '#00ea64',
       description: 'Check my coding skills and certifications'
     },
     {
       icon: <FaKaggle />,
       name: 'Kaggle',
-      url: 'https://kaggle.com/satyamkumarsingh',
+      url: 'https://kaggle.com/siddharthagupta3',
       color: '#20beff',
       description: 'Explore my data science projects and competitions'
     },
@@ -78,49 +78,49 @@ const ConnectPage = () => {
     {
       icon: <FaFacebook />,
       name: 'Facebook',
-      url: 'https://facebook.com/satyamkumarsingh',
+      url: 'https://facebook.com/siddharthagupta3',
       color: '#1877f2',
       description: 'Connect with me on Facebook for updates and discussions'
     },
     {
       icon: <FaDiscord />,
       name: 'Discord',
-      url: 'https://discord.gg/satyamkumarsingh',
+      url: 'https://discord.gg/siddharthagupta3',
       color: '#7289da',
       description: 'Join my Discord server for community discussions'
     },
     {
       icon: <FaTwitter />,
       name: 'Twitter',
-      url: 'https://twitter.com/satyamkumarsingh',
+      url: 'https://twitter.com/siddharthagupta3',
       color: '#1da1f2',
       description: 'Follow me for thoughts, updates, and tech discussions'
     },
     {
       icon: <FaReddit />,
       name: 'Reddit',
-      url: 'https://reddit.com/user/satyamkumarsingh',
+      url: 'https://reddit.com/user/siddharthagupta3',
       color: '#ff4500',
       description: 'Check out my Reddit profile for community engagement'
     },
     {
       icon: <FaPinterest />,
       name: 'Pinterest',
-      url: 'https://pinterest.com/satyamkumarsingh',
+      url: 'https://pinterest.com/siddharthagupta3',
       color: '#e60023',
       description: 'Explore my Pinterest boards for inspiration and ideas'
     },
     {
       icon: <FaTiktok />,
       name: 'TikTok',
-      url: 'https://tiktok.com/@satyamkumarsingh',
+      url: 'https://tiktok.com/@siddharthagupta3',
       color: '#FFC0CB',
       description: 'Follow me on TikTok for short-form content and trends'
     },
     {
       icon: <SiGmail />,
       name: 'Gmail',
-      url: 'mailto:satyamkumarsingh@gmail.com',
+      url: 'mailto:siddharthagupta617@gmail.com',
       color: '#ea4335',
       description: 'Email me directly for inquiries and collaborations'
     },
@@ -134,7 +134,7 @@ const ConnectPage = () => {
     {
       icon: <FaSnapchat />,
       name: 'Snapchat',
-      url: 'https://snapchat.com/add/satyamkumarsingh',
+      url: 'https://snapchat.com/add/siddharthagupta3',
       color: '#fffc00',
       description: 'Connect with me on Snapchat for daily updates'
     }
@@ -144,22 +144,22 @@ const ConnectPage = () => {
     {
       icon: <FaEnvelope />,
       title: 'Email',
-      value: 'satyamkumarsingh@gmail.com',
-      link: 'mailto:satyamkumarsingh@gmail.com',
+      value: 'siddharthagupta617@gmail.com',
+      link: 'mailto:siddharthagupta617@gmail.com',
       color: '#ea4335'
     },
     {
       icon: <FaPhone />,
       title: 'Phone',
-      value: '+91 98765 43210',
-      link: 'tel:+919876543210',
+      value: '+91 98357 173XX',
+      link: 'tel:+9198357173XX',
       color: '#25d366'
     },
     {
       icon: <FaMapMarkerAlt />,
       title: 'Location',
-      value: 'New Delhi, India',
-      link: 'https://maps.google.com/?q=New+Delhi',
+      value: 'Bihar, India',
+      link: 'https://maps.google.com/?q=Bihar+India',
       color: '#4285f4'
     }
   ];

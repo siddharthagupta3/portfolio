@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Satyam.",
+  title: "Siddhartha.",
   description: "A modern portfolio showcasing creative development work and skills",
 };
 

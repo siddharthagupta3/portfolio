@@ -15,7 +15,7 @@ export default function MoreAboutPage() {
       <ThreeBox />
 
       <div className="min-h-screen flex items-center justify-center">
-        <h1 className="text-4xl font-bold text-primary">More About Satyam Kumar Singh !! Page is under maintainence</h1>
+        <h1 className="text-4xl font-bold text-primary">More About Siddhartha Gupta !! Page is under maintainence</h1>
       </div>
 
       {/* Footer Component */}

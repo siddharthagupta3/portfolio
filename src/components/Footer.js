@@ -14,7 +14,7 @@ const Footer = () => {
     { icon: <FaLinkedin />, url: 'https://linkedin.com', color: '#0077b5' },
     { icon: <FaTwitter />, url: 'https://twitter.com', color: '#1DA1F2' },
     { icon: <FaInstagram />, url: 'https://instagram.com', color: '#E1306C' },
-    { icon: <FaEnvelope />, url: 'mailto:contact@example.com', color: '#EA4335' },
+    { icon: <FaEnvelope />, url: 'mailto:siddharthagupta617@gmail.com', color: '#EA4335' },
     { icon: <FaYoutube />, url: 'https://youtube.com/@YOUR_CHANNEL_HERE', color: '#FF0000' },
   ];
 

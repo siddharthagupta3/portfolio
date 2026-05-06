@@ -13,7 +13,7 @@ const About = () => {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.7, type: "spring", stiffness: 100 }
+      transition: { duration: 0.4, type: "spring", stiffness: 120 }
     }
   };
 
@@ -96,15 +96,16 @@ const About = () => {
               viewport={{ once: true, amount: 0.3 }}
               variants={fadeInVariants}
             >
-              <div className="w-full max-w-[600px] h-80 md:h-108 rounded-3xl overflow-hidden">
+              <div className="w-full max-w-[600px] rounded-3xl overflow-hidden shadow-2xl">
                 <Image
                   src="/assets/Image/aboutimg.png"
-                  alt="Profile"
+                  alt="Siddhartha Gupta"
                   className="rounded-3xl"
                   width={600}
-                  height={700}
+                  height={800}
                   layout="responsive"
-                  objectFit="cover"
+                  objectFit="contain"
+                  priority
                 />
               </div>
             </motion.div>
@@ -115,7 +116,7 @@ const About = () => {
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
-              transition={{ delay: 0.3, duration: 1.0 }}
+              transition={{ delay: 0.1, duration: 0.5 }}
               whileHover={{ scale: 1.04, boxShadow: "10px 10px 10px rgba(254, 98, 0, 0.8)", y: -10 }}
             >
               <div className="glass-card p-4 md:p-8 rounded-2xl shadow-lg border-t border-l border-white/10 relative overflow-hidden w-full min-h-[400px]">
@@ -193,7 +194,7 @@ const About = () => {
                   visible: { 
                     opacity: 1, 
                     y: 0, 
-                    transition: { delay: index * 0.2, duration: 0.5 } 
+                    transition: { delay: index * 0.1, duration: 0.4 } 
                   }
                 }}
               >
