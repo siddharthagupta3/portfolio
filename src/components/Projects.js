@@ -18,6 +18,7 @@ const Projects = () => {
       fallbackImage: '/projects/placeholder.jpg', // Fallback image
       category: ['ML', 'DL', 'Data Science'],
       technologies: ['Python', 'CNN', 'Datasets', 'ML', 'DL', 'Data Science', 'Image Processing', 'NumPy', 'TensorFlow', 'Pandas'],
+      titleColor: '#ff6200',
       liveLink: '#',
       githubLink: '#',
       featured: false
@@ -30,6 +31,7 @@ const Projects = () => {
       fallbackImage: '/projects/placeholder.jpg',
       category: ["web", "frontend", "AI"],
       technologies: ["React", "Next.js", "TailwindCSS", "Neon", "Clerk Auth", "PostgreSQL"],
+      titleColor: '#ff6200',
       liveLink: "#",
       githubLink: "#",
       featured: true
@@ -42,6 +44,7 @@ const Projects = () => {
       fallbackImage: '/projects/placeholder.jpg',
       category: ["web", "frontend", "SaaS"],
       technologies: ["React", "Next.js", "TailwindCSS", "Stripe", "PostgreSQL"],
+      titleColor: '#ff6200',
       liveLink: "#",
       githubLink: "#",
       featured: true
@@ -54,6 +57,7 @@ const Projects = () => {
       fallbackImage: '/projects/placeholder.png',
       category: ['web', 'ui'],
       technologies: ['Javascript', 'Next.js', 'Node.js', 'Framer Motion', 'CSS', 'HTML'],
+      titleColor: '#ff6200',
       liveLink: '#',
       githubLink: '#',
       featured: true
@@ -66,6 +70,7 @@ const Projects = () => {
       fallbackImage: '/projects/placeholder.jpg',
       category: ['web', 'api'],
       technologies: ['React', 'OpenWeather API', 'Chart.js'],
+      titleColor: '#ff6200',
       liveLink: '#',
       githubLink: '#',
       featured: false
@@ -78,6 +83,7 @@ const Projects = () => {
       fallbackImage: '/projects/placeholder.jpg',
       category: ['web', 'ui'],
       technologies: ['React', 'Redux', 'Material UI', 'D3.js'],
+      titleColor: '#ff6200',
       liveLink: '#',
       githubLink: '#',
       featured: false
@@ -119,7 +125,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="pt-20 pb-10">
       <div className="container text-center relative mx-auto px-4">
         <motion.div
           className="text-center mb-20 sm:mb-10"
@@ -128,9 +134,9 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5">Projects</div>
+          <div className="section-badge mb-5" style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', border: '1px solid rgba(255, 98, 0, 0.3)' }}>Projects</div>
           <div className="h-7"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ff9400' }}>Technical Projects</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Technical Projects</h2>
           <div className="h-7"></div>
           <div className="mx-auto mt-8 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
             <p className="glass-card w-full max-w-2xl mx-auto text-l sm:text-l mt-8 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
@@ -155,7 +161,7 @@ const Projects = () => {
                   transition: { delay: index * 0.1, duration: 0.6, type: "spring" }
                 }
               }}
-              whileHover={{ boxShadow: "10px 10px 10px rgba(254, 98, 0, 0.8)", y: -10 }}
+              whileHover={{ boxShadow: "0 10px 40px rgba(125, 211, 252, 0.2)", y: -10 }}
             >
               <div className="h-48 relative group">
                 {project.featured && (
@@ -168,7 +174,7 @@ const Projects = () => {
                 <div className="w-full h-full relative">
                   {imageError[project.id] ? (
                     <div className="w-full h-full bg-gradient-to-r from-primary to-secondary animate-gradient flex items-center justify-center">
-                      <span className="text-dark text-2xl font-bold text-clear" style={{ color: 'var(--primary)' }}>
+                      <span className="text-dark text-2xl font-bold text-clear" style={{ color: project.titleColor || 'var(--primary)' }}>
                         {project.title}
                       </span>
                     </div>
@@ -200,7 +206,7 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-clear" style={{ color: 'var(--primary)' }}>{project.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-clear" style={{ color: project.titleColor || 'var(--primary)' }}>{project.title}</h3>
                 <p
                   className="mb-6 text-center"
                   style={{
@@ -272,13 +278,13 @@ const Projects = () => {
         )}
 
         <motion.div
-          className="text-center mt-20"
+          className="text-center mt-10"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="h-30"></div>
+
           <motion.button
             className="btn btn-secondary"
             style={{ fontFamily: 'Lugrasimo' }}
@@ -293,7 +299,7 @@ const Projects = () => {
               window.location.href = '/connect';
             }}>
 
-            Explore Projects
+            <span style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Explore Projects</span>
           </motion.button>
         </motion.div>
       </div>

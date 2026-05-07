@@ -75,9 +75,9 @@ const Skills = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5">Skills and Interests of Siddhartha Gupta</div>
+          <div className="section-badge mb-5" style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', border: '1px solid rgba(255, 98, 0, 0.3)' }}>Skills and Interests of Siddhartha Gupta</div>
           <div className="h-7"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#ff9400' }}>Technical Domain and Interests</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Technical Domain and Interests</h2>
           <div className="h-10"></div>
           <p className="glass-card text-l w-full mt-8 text-clear text-center" style={{ color: 'var(--primary)' }}>
             I have gone through a diverse set of skills throughout my journey as a keen learner. 
@@ -97,8 +97,6 @@ const Skills = () => {
               { name: 'Statistics', icon: <FaChartLine className="text-6xl text-purple-500" /> },
               { name: 'NumPy', icon: <SiPython className="text-6xl text-yellow-600" /> },
               { name: 'Pandas', icon: <SiPython className="text-6xl text-red-500" /> },
-              // { name: 'Matplotlib', icon: <FaChartLine className="text-6xl text-blue-600" /> },
-              // { name: 'Seaborn', icon: <FaChartLine className="text-6xl text-pink-500" /> },
               { name: 'SciPy', icon: <SiPython className="text-6xl text-blue-800" /> },
               { name: 'Scikit-learn', icon: <SiPython className="text-6xl text-orange-500" /> },
               { name: 'TensorFlow', icon: <SiTensorflow className="text-6xl text-orange-500" /> },
@@ -106,8 +104,6 @@ const Skills = () => {
               { name: 'MySQL', icon: <SiMysql className="text-6xl text-red-500" /> },
               { name: 'AI/ML', icon: <FaRobot className="text-6xl text-blue-500" /> },
               { name: 'Deep Learning', icon: <FaBrain className="text-6xl text-indigo-500" /> },
-              // { name: 'AI', icon: <FaRobot className="text-6xl text-purple-500" /> },
-              // { name: 'Generative AI', icon: <FaRobot className="text-6xl text-green-500" /> },
               { name: 'Git', icon: <FaGitAlt className="text-6xl text-green-500" /> },
 
               // Web Development
@@ -116,8 +112,6 @@ const Skills = () => {
               { name: 'Next.js', icon: <SiNextdotjs className="text-6xl text-black dark:text-white" /> },
               { name: 'Node.js', icon: <SiNodedotjs className="text-6xl text-green-500" /> },
               { name: 'Tailwind', icon: <SiTailwindcss className="text-6xl text-cyan-500" /> },
-              // { name: 'TypeScript', icon: <SiTypescript className="text-6xl text-blue-600" /> },
-              // { name: 'GraphQL', icon: <SiGraphql className="text-6xl text-pink-600" /> },
               { name: 'MongoDB', icon: <SiMongodb className="text-6xl text-pink-600" /> },
               { name: 'Django', icon: <SiDjango className="text-6xl text-emerald-700" /> },
               { name: 'Flask', icon: <SiFlask className="text-6xl text-gray-400" /> },

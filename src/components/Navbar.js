@@ -126,7 +126,7 @@ const Navbar = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
           >
-            <span className="text-gradient" style={{ fontSize: '1.5rem' }}>
+            <span style={{ fontSize: '1.5rem', color: '#ff6200' }}>
               Siddhartha
             </span>
             <span style={{ color: 'var(--accent)' }}>.</span>
@@ -182,8 +182,8 @@ const Navbar = () => {
                         }}
                         whileHover={{
                           scale: 1.05,
-                          backgroundColor: 'var(--primary)',
-                          color: 'white',
+                          backgroundColor: 'var(--primary-light)',
+                          color: 'var(--dark)',
                         }}
                         transition={{ duration: 0.2 }}
                       >
@@ -192,7 +192,7 @@ const Navbar = () => {
                     ))}
                     <motion.div className="w-full">
                       <motion.div
-                        whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)' }}
+                        whileHover={{ scale: 1.05, backgroundColor: 'var(--primary-light)' }}
                         transition={{ duration: 0.2 }}
                         className="w-full rounded-md overflow-hidden"
                       >
@@ -207,7 +207,7 @@ const Navbar = () => {
                     </motion.div>
                     <motion.div className="w-full">
                       <motion.div
-                        whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)' }}
+                        whileHover={{ scale: 1.05, backgroundColor: 'var(--primary-light)' }}
                         transition={{ duration: 0.2 }}
                         className="w-full rounded-md overflow-hidden"
                       >
@@ -222,7 +222,7 @@ const Navbar = () => {
                     </motion.div>
                     <motion.div className="w-full">
                       <motion.div
-                        whileHover={{ scale: 1.05, backgroundColor: 'var(--primary)' }}
+                        whileHover={{ scale: 1.05, backgroundColor: 'var(--primary-light)' }}
                         transition={{ duration: 0.2 }}
                         className="w-full rounded-md overflow-hidden"
                       >
@@ -254,15 +254,15 @@ const Navbar = () => {
         {/* Smile Icon Toggle Button */}
         <motion.button
           ref={buttonRef}
-          className="smile-toggle text-2xl z-50 cursor-pointer"
+          className="smile-toggle text-2xl z-50 cursor-pointer mr-12 -mt-6 md:mr-0 md:mt-0"
           style={{
-            color: 'var(--primary)',
+            color: '#ff6200',
             right: 'calc(4px + var(--scrollbar-width, 0px))',
           }}
           whileHover={{ scale: 1.1 }}
           onClick={toggleMenu}
         >
-          {isMobileMenuOpen || isOpen ? <FaTimes style={{ color: 'var(--primary)' }} /> : <FaSmile />}
+          {isMobileMenuOpen || isOpen ? <FaTimes style={{ color: '#ff6200' }} /> : <FaSmile />}
         </motion.button>
 
         {/* Mobile Dropdown Menu */}
@@ -276,7 +276,7 @@ const Navbar = () => {
               exit={{ transform: 'translateX(100%)' }}
               transition={{ duration: 0.4, type: 'spring', stiffness: 120, damping: 20 }}
             >
-              <FaTimes className="close-btn" onClick={() => setIsMobileMenuOpen(false)} />
+              {/* Redundant close button removed */}
               <motion.a
                 href="/#home"
                 className="text-lg"

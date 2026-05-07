@@ -109,9 +109,9 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5">Contact Siddhartha Gupta</div>
+          <div className="section-badge mb-5" style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', border: '1px solid rgba(255, 98, 0, 0.3)' }}>Contact Siddhartha Gupta</div>
           <div className="h-7"></div>
-          <h2 className="text-3xl md:text-4xl sm:text-2xl font-bold mb-6" style={{ color: 'var(--primary)' }}>Get In Touch</h2>
+          <h2 className="text-3xl md:text-4xl sm:text-2xl font-bold mb-6 text-gradient">Get In Touch</h2>
           <div className="h-7"></div>
           <div className="mx-auto mt-8 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
             <p className="glass-card w-full max-w-2xl mx-auto text-l sm:text-l mt-8 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
@@ -207,7 +207,7 @@ const Contact = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
             transition={{ delay: 0.3, duration: 1.0 }}
-            whileHover={{ scale: 1.04, boxShadow: "10px 10px 10px rgba(254, 98, 0, 0.8)", y: -10 }}
+            whileHover={{ scale: 1.02, boxShadow: "0 10px 40px rgba(125, 211, 252, 0.2)", y: -5 }}
           >
             <div className="h-full w-full bg-gradient-to-br from-primary to-secondary p-0.5 rounded-2xl">
               <div className="rounded-2xl">
@@ -245,7 +245,7 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Your Name"
-                      className="w-full px-5 py-4 sm:px-3 sm:py-2 rounded-xl border focus:outline-none focus:ring-2 transition-all"
+                      className="w-full px-6 py-5 sm:px-5 sm:py-4 rounded-xl border focus:outline-none focus:ring-2 transition-all placeholder:text-gray-500"
                       style={{
                         backgroundColor: 'var(--glass-background)',
                         borderColor: 'var(--secondary)',
@@ -262,7 +262,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Your Email"
-                      className="w-full px-5 py-4 sm:px-3 sm:py-2 rounded-xl border focus:outline-none focus:ring-2 transition-all"
+                      className="w-full px-6 py-5 sm:px-5 sm:py-4 rounded-xl border focus:outline-none focus:ring-2 transition-all placeholder:text-gray-500"
                       style={{
                         backgroundColor: 'var(--glass-background)',
                         borderColor: 'var(--primary)',
@@ -279,7 +279,7 @@ const Contact = () => {
                       value={formData.subject}
                       onChange={handleChange}
                       placeholder="Subject"
-                      className="w-full px-5 py-4 sm:px-3 sm:py-2 rounded-xl border focus:outline-none focus:ring-2 transition-all"
+                      className="w-full px-6 py-5 sm:px-5 sm:py-4 rounded-xl border focus:outline-none focus:ring-2 transition-all placeholder:text-gray-500"
                       style={{
                         backgroundColor: 'var(--glass-background)',
                         borderColor: 'var(--primary)',
@@ -296,7 +296,7 @@ const Contact = () => {
                       onChange={handleChange}
                       placeholder="Your Message"
                       rows="6"
-                      className="w-full px-5 py-4 sm:px-3 sm:py-2 rounded-xl border focus:outline-none focus:ring-2 transition-all"
+                      className="w-full px-6 py-5 sm:px-5 sm:py-4 rounded-xl border focus:outline-none focus:ring-2 transition-all placeholder:text-gray-500"
                       style={{
                         backgroundColor: 'var(--glass-background)',
                         borderColor: 'var(--primary)',

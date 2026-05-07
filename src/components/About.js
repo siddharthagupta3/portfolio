@@ -19,39 +19,45 @@ const About = () => {
 
   const services = [
     {
-      icon: <LuBrainCircuit color="#7a73fa" />,
+      icon: <LuBrainCircuit color="#a855f7" />,
       title: "AI and Machine Learning",
-      titleColor: "#7a73fa",
+      titleColor: "#a855f7",
+      descColor: "#ea580c",
       description: "Creating AI and Machine Learning models with modern technologies, libraries and modules."
     },
     {
-      icon: <FaCode color="#fc6f4c" />,
+      icon: <FaCode color="#ec4899" />,
       title: "Web Development",
-      titleColor: "#fc6f4c",
+      titleColor: "#ec4899",
+      descColor: "#f97316",
       description: "Creating beautiful, functional websites with modern technologies and best practices."
     },
     {
-      icon: <TfiMicrosoftAlt color='#FFC107' />,
+      icon: <TfiMicrosoftAlt color='#eab308' />,
       title: "Software Development",
-      titleColor: "#FFC107",
+      titleColor: "#eab308",
+      descColor: "#f97316",
       description: "Building software that work flawlessly across all devices and platforms."
     },
     {
-      icon: <FaMobileAlt color="#65e9f7" />,
+      icon: <FaMobileAlt color="#38bdf8" />,
       title: "Agentic AI Development",
-      titleColor: "#65e9f7",
+      titleColor: "#38bdf8",
+      descColor: "#f97316",
       description: "Building AI Agents and agentic workflow that work flawlessly across all devices."
     },
     {
-      icon: <FaPalette color="#e36dc3" />,
+      icon: <FaPalette color="#fbcfe8" />,
       title: "UI/UX Design",
-      titleColor: "#e36dc3",
+      titleColor: "#fbcfe8",
+      descColor: "#f97316",
       description: "Crafting intuitive interfaces with a focus on user experience and aesthetic appeal."
     },
     {
-      icon: <FaBolt color="#f7656a" />,
+      icon: <FaBolt color="#be185d" />,
       title: "Performance Optimization",
-      titleColor: "#f7656a",
+      titleColor: "#be185d",
+      descColor: "#f97316",
       description: "Ensuring websites load quickly and run smoothly for the best user experience."
     },
   ];
@@ -212,7 +218,7 @@ const About = () => {
 
                 <div className="p-4 md:p-8">
                   <h4 style={{ color: service.titleColor || "#ffffff" }} className="text-base md:text-lg font-semibold mb-2 md:mb-4 text-clear group-hover:text-gradient transition-colors duration-300">{service.title}</h4>
-                  <p className="text-sm md:text-base text-clear" style={{ color: 'var(--primary)' }}>
+                  <p className="text-sm md:text-base text-clear" style={{ color: service.descColor || 'var(--primary)' }}>
                     {service.description}
                   </p>
 

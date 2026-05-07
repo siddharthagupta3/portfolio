@@ -58,7 +58,14 @@ const Hero = () => {
 
           <motion.h1
             className="text-8xl md:text-12xl font-bold mb-6"
-            style={{ color:'var(--primary)', fontFamily: 'Luxurious Script' }}
+            style={{ 
+              background: 'linear-gradient(135deg, #ff4500, #ff8c00)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              fontFamily: 'Luxurious Script',
+              filter: 'drop-shadow(0 0 15px rgba(255, 69, 0, 0.6))',
+              letterSpacing: '2px'
+            }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
