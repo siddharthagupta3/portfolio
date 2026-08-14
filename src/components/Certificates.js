@@ -34,7 +34,6 @@ const Certificates = () => {
       <div className="container relative z-10">
         {/* Section Header */}
         <div className="text-center mb-20">
-          <div className="section-badge mb-5">Certifications & Achievements</div>
           <div className="h-7"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">
             <FaAward className="inline-block mr-3 mb-1" />
