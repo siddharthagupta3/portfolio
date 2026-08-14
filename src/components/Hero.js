@@ -304,15 +304,15 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+0.5rem)] pb-6 md:pt-[calc(var(--header-height,5rem)+1.25rem)] md:pb-10"
+      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+1rem)] pb-3 max-md:pb-4 md:pt-[calc(var(--header-height,5rem)+1.25rem)] md:pb-10"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Header */}
-      <div className="relative z-20 flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none mt-6 mb-3 md:mt-14 md:mb-6 lg:mt-16 shrink-0">
-        <div className="w-8 h-px bg-gray-600" />
-        <span>
+      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none mt-6 mb-4 max-md:mt-8 max-md:mb-5 max-md:w-full max-md:px-4 md:mt-14 md:mb-6 lg:mt-16 shrink-0">
+        <div className="w-8 h-px bg-gray-600 shrink-0" />
+        <span className="whitespace-nowrap">
           OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
         </span>
       </div>
@@ -320,7 +320,7 @@ export default function Hero() {
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full max-w-full relative z-10 shrink-0 min-h-[340px] h-[clamp(340px,calc(100svh-var(--header-height,4.5rem)-8.5rem),500px)] sm:min-h-[460px] sm:h-auto sm:max-h-none md:min-h-[640px]"
+        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-7.5rem)] max-md:min-h-[380px] md:min-h-[640px]"
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
@@ -406,7 +406,7 @@ export default function Hero() {
       </div>
 
       {/* Footer */}
-      <div className="relative z-20 flex items-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-3 mb-1 md:mt-6 md:mb-0 shrink-0">
+      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-4 max-md:mt-5 max-md:mb-2 max-md:w-full max-md:px-4 md:mt-6 md:mb-0 shrink-0 whitespace-nowrap">
         DRAG <span className="text-[#ff6200]">•</span> HOVER TO EXPLORE
       </div>
     </section>
