@@ -94,14 +94,7 @@ const links = [
   ['svelte', 'js'],
 ].map(([source, target]) => ({ source, target }));
 
-const StackHeading = () => (
-  <div className="flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none whitespace-nowrap">
-    <div className="w-8 h-px bg-gray-600 shrink-0" />
-    <span>
-      OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
-    </span>
-  </div>
-);
+const StackHeading = () => null;
 
 export default function Hero() {
   const containerRef = useRef(null);
