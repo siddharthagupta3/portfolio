@@ -106,6 +106,7 @@ const StackHeading = () => (
 export default function Hero() {
   const containerRef = useRef(null);
   const [navigateX, setNavigateX] = useState(null);
+  const [navigateY, setNavigateY] = useState(null);
   const nodeRefs = useRef({});
   const linkRefs = useRef({});
   const simulationRef = useRef(null);
@@ -146,7 +147,9 @@ export default function Hero() {
       const btnRect = btn.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
       const centerX = btnRect.left + btnRect.width / 2 - containerRect.left;
+      const centerY = btnRect.bottom - containerRect.top; // place under the button
       setNavigateX(Math.round(centerX));
+      setNavigateY(Math.round(centerY));
     };
 
     updateNavigatePosition();
