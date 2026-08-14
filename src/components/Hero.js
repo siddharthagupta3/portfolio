@@ -343,9 +343,9 @@ export default function Hero() {
   };
 
   return (
-    <section
+      <section
       id="hero"
-      className="relative bg-black text-white overflow-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+0.75rem)] pb-0 max-md:pb-2 md:pt-0 md:pb-0 md:h-[calc(100vh - var(--header-height,5rem))]"
+      className="relative bg-black text-white overflow-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+0.75rem)] pb-0 max-md:pb-2 md:pt-0 md:pb-0 md:h-[calc(100vh - var(--header-height,5rem) + 48px)]"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
@@ -376,7 +376,7 @@ export default function Hero() {
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-5rem)] max-md:min-h-[260px] md:h-full md:min-h-[480px] mt-2 md:mt-0"
+        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh - var(--header-height,4.5rem) - 5rem + 48px)] max-md:min-h-[260px] md:h-[calc(100vh - var(--header-height,5rem) + 48px)] md:min-h-[480px] mt-2 md:mt-0"
         style={{ transform: dimensions.width > 0 && dimensions.width < 768 ? 'translateY(86px)' : 'translateY(0)' }}
       >
         {/* Connections */}
