@@ -383,7 +383,7 @@ export default function Hero() {
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-8rem)] max-md:min-h-[380px] md:min-h-[640px] mt-6 md:mt-10"
+        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-6rem)] max-md:min-h-[320px] md:min-h-[520px] mt-3 md:mt-6"
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
