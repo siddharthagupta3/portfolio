@@ -94,6 +94,15 @@ const links = [
   ['svelte', 'js'],
 ].map(([source, target]) => ({ source, target }));
 
+const StackHeading = () => (
+  <div className="flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none whitespace-nowrap">
+    <div className="w-8 h-px bg-gray-600 shrink-0" />
+    <span>
+      OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
+    </span>
+  </div>
+);
+
 export default function Hero() {
   const containerRef = useRef(null);
   const nodeRefs = useRef({});
@@ -304,23 +313,42 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+1rem)] pb-3 max-md:pb-4 md:pt-[calc(var(--header-height,5rem)+1.25rem)] md:pb-10"
+      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+0.75rem)] pb-3 max-md:pb-4 md:pt-[calc(var(--header-height,5rem)+1rem)] md:pb-10"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
 
-      {/* Header */}
-      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none mt-6 mb-4 max-md:mt-8 max-md:mb-5 max-md:w-full max-md:px-4 md:mt-14 md:mb-6 lg:mt-16 shrink-0">
-        <div className="w-8 h-px bg-gray-600 shrink-0" />
-        <span className="whitespace-nowrap">
-          OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
-        </span>
+      {/* Mobile: centered below navbar */}
+      <div className="md:hidden container w-full flex justify-center px-12 mb-3 relative z-20 shrink-0">
+        <StackHeading />
+      </div>
+
+      {/* Desktop: aligned directly below Navigate */}
+      <div className="hidden md:flex container w-full justify-between items-start mb-5 relative z-20 shrink-0">
+        <div className="invisible pointer-events-none shrink-0" aria-hidden="true">
+          <div className="text-2xl font-bold" style={{ fontFamily: 'Lugrasimo' }}>
+            <span style={{ fontSize: '1.5rem' }}>Siddhartha</span>
+            <span>.</span>
+          </div>
+        </div>
+        <div className="flex items-start gap-8">
+          <div className="flex flex-col items-center pt-3">
+            <StackHeading />
+          </div>
+          <div
+            className="btn btn-secondary outline-none ml-4 invisible pointer-events-none shrink-0"
+            aria-hidden="true"
+          >
+            Connect
+          </div>
+        </div>
+        <div className="w-10 shrink-0 invisible pointer-events-none" aria-hidden="true" />
       </div>
 
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-7.5rem)] max-md:min-h-[380px] md:min-h-[640px]"
+        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-8rem)] max-md:min-h-[380px] md:min-h-[640px]"
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
