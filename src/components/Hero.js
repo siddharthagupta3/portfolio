@@ -147,9 +147,21 @@ export default function Hero() {
       const btnRect = btn.getBoundingClientRect();
       const containerRect = container.getBoundingClientRect();
       const centerX = btnRect.left + btnRect.width / 2 - containerRect.left;
-      const centerY = btnRect.bottom - containerRect.top; // place under the button
+      const btnBottomY = btnRect.bottom - containerRect.top; // place under the button
+
+      // Also ensure StackHeading sits below the header (Siddhartha). Use header bottom if available.
+      const header = document.querySelector('header');
+      let headerBottomY = 0;
+      if (header) {
+        const headerRect = header.getBoundingClientRect();
+        headerBottomY = headerRect.bottom - containerRect.top;
+      }
+
+      // final Y is the greater of button bottom or header bottom + small offset
+      const finalY = Math.max(btnBottomY, headerBottomY + 8);
+
       setNavigateX(Math.round(centerX));
-      setNavigateY(Math.round(centerY));
+      setNavigateY(Math.round(finalY));
     };
 
     updateNavigatePosition();
@@ -340,7 +352,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+1.5rem)] pb-3 max-md:pb-4 md:pt-[calc(var(--header-height,5rem)+6rem)] md:pb-10"
+      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+0.75rem)] pb-0 max-md:pb-2 md:pt-[calc(var(--header-height,5rem)+1rem)] md:pb-6"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
@@ -371,7 +383,7 @@ export default function Hero() {
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-8rem)] max-md:min-h-[380px] md:min-h-[640px] mt-12 md:mt-20"
+        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-8rem)] max-md:min-h-[380px] md:min-h-[640px] mt-6 md:mt-10"
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
@@ -457,7 +469,7 @@ export default function Hero() {
       </div>
 
       {/* Footer */}
-      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-4 max-md:mt-5 max-md:mb-2 max-md:w-full max-md:px-4 md:mt-6 md:mb-0 shrink-0 whitespace-nowrap">
+      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-8 max-md:mt-5 max-md:mb-2 max-md:w-full max-md:px-4 md:mt-10 md:mb-0 shrink-0 whitespace-nowrap">
         DRAG <span className="text-[#ff6200]">•</span> HOVER TO EXPLORE
       </div>
     </section>

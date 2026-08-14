@@ -125,7 +125,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="pt-8 pb-10">
+    <section id="projects" className="pt-4 pb-10">
       <div className="container text-center relative mx-auto px-4">
         <motion.div
           className="text-center mb-6 sm:mb-6"
