@@ -337,7 +337,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+0.75rem)] pb-3 max-md:pb-4 md:pt-[calc(var(--header-height,5rem)+1rem)] md:pb-10"
+      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+1.5rem)] pb-3 max-md:pb-4 md:pt-[calc(var(--header-height,5rem)+6rem)] md:pb-10"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
