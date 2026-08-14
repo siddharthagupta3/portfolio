@@ -95,12 +95,7 @@ const links = [
 ].map(([source, target]) => ({ source, target }));
 
 const StackHeading = () => (
-  <div className="flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none whitespace-nowrap">
-    <div className="w-8 h-px bg-gray-600 shrink-0" />
-    <span>
-      OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
-    </span>
-  </div>
+  <div className="w-8 h-px bg-gray-600 shrink-0" />
 );
 
 export default function Hero() {
@@ -348,7 +343,7 @@ export default function Hero() {
       </div>
 
       {/* Desktop: position StackHeading under the Navigate button (calculates horizontal center) */}
-      <div className="hidden md:block absolute left-0 right-0 z-20 pointer-events-none" style={{ top: 'calc(var(--header-height,5rem) + 0.5rem)' }}>
+      <div className="hidden md:block absolute left-0 right-0 z-20 pointer-events-none" style={{ top: 'calc(var(--header-height,5rem) + 1rem)' }}>
         <div style={{ position: 'relative', width: '100%', height: 0 }}>
           <div
             style={{
