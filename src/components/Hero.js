@@ -377,7 +377,7 @@ export default function Hero() {
       <div
         ref={containerRef}
         className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-5rem)] max-md:min-h-[260px] md:min-h-[480px] mt-2 md:mt-4"
-        style={{ transform: dimensions.width > 0 && dimensions.width < 768 ? 'translateY(48px)' : 'translateY(0)' }}
+        style={{ transform: dimensions.width > 0 && dimensions.width < 768 ? 'translateY(86px)' : 'translateY(12px)' }}
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
@@ -463,7 +463,7 @@ export default function Hero() {
       </div>
 
       {/* Footer */}
-      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-8 max-md:mt-5 max-md:mb-2 max-md:w-full max-md:px-4 md:mt-10 md:mb-0 shrink-0 whitespace-nowrap">
+      <div className="relative z-20 flex items-center justify-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-12 max-md:mt-10 max-md:mb-3 max-md:w-full max-md:px-4 md:mt-14 md:mb-0 shrink-0 whitespace-nowrap">
         DRAG <span className="text-[#ff6200]">•</span> HOVER TO EXPLORE
       </div>
     </section>
