@@ -304,13 +304,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-20 pb-8 md:pb-10"
+      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-[calc(var(--header-height,4.5rem)+1rem)] md:pt-[calc(var(--header-height,5rem)+1.25rem)] pb-8 md:pb-10"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Header */}
-      <div className="relative z-20 flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none mt-8 mb-4 md:mt-10 md:mb-6">
+      <div className="relative z-20 flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none mt-10 mb-4 sm:mt-12 md:mt-14 md:mb-6 lg:mt-16">
         <div className="w-8 h-px bg-gray-600" />
         <span>
           OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
