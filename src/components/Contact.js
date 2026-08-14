@@ -40,7 +40,7 @@ const Contact = () => {
         subject: '',
         message: ''
       });
-      
+
       // Reset success message after 5 seconds
       setTimeout(() => {
         setSubmitSuccess(false);
@@ -109,7 +109,7 @@ const Contact = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5" style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', border: '1px solid rgba(255, 98, 0, 0.3)' }}>Contact Siddhartha Gupta</div>
+          {/* Removed orange "Contact Siddhartha Gupta" section heading as requested */}
           <div className="h-7"></div>
           <h2 className="text-3xl md:text-4xl sm:text-2xl font-bold mb-6 text-gradient">Get In Touch</h2>
           <div className="h-7"></div>
@@ -326,42 +326,7 @@ const Contact = () => {
             </div>
           </motion.div>
 
-          <motion.div
-            className="mt-24 sm:mt-10 glass-card p-12 sm:p-6 rounded-2xl border-gradient"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ delay: 0.3, duration: 1.0 }}
-            whileHover={{ scale: 1.04, boxShadow: "10px 10px 10px rgba(254, 98, 0, 0.8)", y: -10 }}
-          >
-            <div className="h-auto sm:min-h-[300px] md:h-full rounded-2xl p-0.5">
-              <div className="w-full h-full bg-gradient-to-tr from-primary via-secondary to-accent animate-gradient rounded-2xl flex flex-col items-center justify-center text-dark px-12 sm:px-6" style={{ color: 'var(--primary)' }}>
-                <h3 className="text-2xl md:text-3xl sm:text-xl font-bold mb-8 text-center text-dark text-clear">I&apos;d Love To Hear From You</h3>
-                <p className="flex text-center mb-12 max-w-md text-clear text-base sm:text-sm">
-                  Whether you have any question, want to discuss a project, or just want to say Namaste, I&apos;m always open to new opportunities and connections.
-                </p>
-                <motion.button
-                  className="btn btn-tertiary w-full sm:w-auto"
-                  style={{ fontFamily: 'Lugrasimo' }}
-                  whileHover={{ 
-                    scale: 1.05,
-                    backgroundColor: 'var(--secondary)',
-                    color: 'white'
-                  }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                  onClick={() => {
-                    window.location.href = '/connect';
-                  }}
-                >
-                  Connect Now
-                </motion.button>
-                <p className="text-lg sm:text-base font-medium flex items-center text-dark mt-8">
-                  Let&apos;s create something amazing !!!!!
-                </p>
-              </div>
-            </div>
-          </motion.div>
+          {/* Removed 'I'd Love To Hear From You' panel as requested */}
         </div>
       </div>
     </section>

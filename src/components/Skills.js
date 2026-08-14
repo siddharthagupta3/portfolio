@@ -75,10 +75,8 @@ const Skills = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5" style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', border: '1px solid rgba(255, 98, 0, 0.3)' }}>Skills and Interests of Siddhartha Gupta</div>
-          <div className="h-7"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Technical Domain and Interests</h2>
-          <div className="h-10"></div>
+          <div className="h-6"></div>
           <p className="glass-card text-l w-full mt-8 text-clear text-center" style={{ color: 'var(--primary)' }}>
             I have gone through a diverse set of skills throughout my journey as a keen learner. 
             My technical interests span a wide spectrum, from crafting intelligent software systems 
@@ -224,46 +222,7 @@ const Skills = () => {
         </div> */}
         <div className="h-10"></div>
 
-        <motion.div
-          className="mt-24 glass-card p-12 rounded-2xl border-gradient"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ delay: 0.3, duration: 1.0 }}
-          whileHover={{ scale: 1.04, boxShadow: "10px 10px 10px rgba(254, 98, 0, 0.8)", y: -10 }}>
-        
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div className="text-content">
-              <h3 className="text-2xl font-semibold mb-6 text-gradient">Let&apos;s Work Together!</h3>
-              <p className="mb-8 text-clear" style={{ color: '#ff9400' }}>
-                Looking for a developer to help with your project? I&apos;m currently available for freelance work and collaborations. Let&apos;s create something amazing together!
-              </p>
-              <motion.button 
-                className="btn btn-tertiary"
-                style={{ fontFamily: 'Lugrasimo'}}
-                whileHover={{ 
-                  scale: 1.05,
-                  backgroundColor: 'var(--secondary)',
-                  color: 'white'
-                }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: 'spring', stiffness: 400, damping: 10 }}
-                onClick={() => {
-                  window.location.href = '/connect';
-                }}
-              >
-                Contact Information
-              </motion.button>
-            </div>
-            <div className="relative">
-              <div className="w-full h-64 rounded-xl bg-gradient-to-tr from-primary via-secondary to-accent animate-gradient flex items-center justify-center">
-                <div className="text-dark text-xl md:text-2xl font-semibold max-w-xs text-center text-clear px-8" style={{ color: '#ff9400' }}>
-                  &quot;Quality is not an act, it is a habit.&quot; - Aristotle
-                </div>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        {/* Removed "Let's Work Together" section as requested */}
       </div>
     </section>
   );

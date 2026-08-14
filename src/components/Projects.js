@@ -134,7 +134,7 @@ const Projects = () => {
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          <div className="section-badge mb-5" style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', border: '1px solid rgba(255, 98, 0, 0.3)' }}>Projects</div>
+          {/* Removed orange "Projects" section heading as requested */}
           <div className="h-7"></div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Technical Projects</h2>
           <div className="h-7"></div>
@@ -285,7 +285,7 @@ const Projects = () => {
           variants={fadeInUpVariants}
         >
 
-          <motion.button
+            <motion.button
             className="btn btn-secondary"
             style={{ fontFamily: 'Lugrasimo' }}
             whileHover={{
@@ -299,7 +299,7 @@ const Projects = () => {
               window.location.href = '/connect';
             }}>
 
-            <span style={{ background: 'linear-gradient(to right, #ff6200, #ffc107)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent' }}>Explore Projects</span>
+            {/* Removed orange "Explore Projects" text as requested */}
           </motion.button>
         </motion.div>
       </div>
