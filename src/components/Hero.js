@@ -105,6 +105,7 @@ const StackHeading = () => (
 
 export default function Hero() {
   const containerRef = useRef(null);
+  const [navigateX, setNavigateX] = useState(null);
   const nodeRefs = useRef({});
   const linkRefs = useRef({});
   const simulationRef = useRef(null);
@@ -135,6 +136,29 @@ export default function Hero() {
 
     return () => observer.disconnect();
   }, []);
+
+  // Compute horizontal center of the "Navigate" button so heading can align under it (desktop)
+  useEffect(() => {
+    const updateNavigatePosition = () => {
+      const btn = document.getElementById('navigate-btn');
+      const container = containerRef.current;
+      if (!btn || !container) return;
+      const btnRect = btn.getBoundingClientRect();
+      const containerRect = container.getBoundingClientRect();
+      const centerX = btnRect.left + btnRect.width / 2 - containerRect.left;
+      setNavigateX(Math.round(centerX));
+    };
+
+    updateNavigatePosition();
+    window.addEventListener('resize', updateNavigatePosition);
+    // Also update on scroll in case header height/layout changes
+    window.addEventListener('scroll', updateNavigatePosition);
+
+    return () => {
+      window.removeEventListener('resize', updateNavigatePosition);
+      window.removeEventListener('scroll', updateNavigatePosition);
+    };
+  }, [containerRef]);
 
   // D3 force simulation
   useEffect(() => {
@@ -323,26 +347,22 @@ export default function Hero() {
         <StackHeading />
       </div>
 
-      {/* Desktop: aligned directly below Navigate */}
-      <div className="hidden md:flex container w-full justify-between items-start mb-5 relative z-20 shrink-0">
-        <div className="invisible pointer-events-none shrink-0" aria-hidden="true">
-          <div className="text-2xl font-bold" style={{ fontFamily: 'Lugrasimo' }}>
-            <span style={{ fontSize: '1.5rem' }}>Siddhartha</span>
-            <span>.</span>
-          </div>
-        </div>
-        <div className="flex items-start gap-8">
-          <div className="flex flex-col items-center pt-3">
-            <StackHeading />
-          </div>
+      {/* Desktop: position StackHeading under the Navigate button (calculates horizontal center) */}
+      <div className="hidden md:block absolute left-0 right-0 z-20 pointer-events-none" style={{ top: 'calc(var(--header-height,5rem) + 0.5rem)' }}>
+        <div style={{ position: 'relative', width: '100%', height: 0 }}>
           <div
-            className="btn btn-secondary outline-none ml-4 invisible pointer-events-none shrink-0"
-            aria-hidden="true"
+            style={{
+              position: 'absolute',
+              left: navigateX !== null ? `${navigateX}px` : '50%',
+              transform: 'translateX(-50%)',
+              pointerEvents: 'auto',
+            }}
           >
-            Connect
+            <div className="flex flex-col items-center" style={{ marginTop: '0.25rem' }}>
+              <StackHeading />
+            </div>
           </div>
         </div>
-        <div className="w-10 shrink-0 invisible pointer-events-none" aria-hidden="true" />
       </div>
 
       {/* Graph */}

@@ -142,6 +142,7 @@ const Navbar = () => {
         >
           <motion.div className="relative" variants={itemVariants} ref={dropdownRef}>
             <motion.button
+              id="navigate-btn"
               className="btn btn-secondary outline-none"
               variants={itemVariants}
               whileHover={{ scale: 1.05, backgroundColor: 'var(--secondary)', color: 'white' }}
