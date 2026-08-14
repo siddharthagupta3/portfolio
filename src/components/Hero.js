@@ -343,12 +343,12 @@ export default function Hero() {
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Mobile: centered below navbar */}
-      <div className="md:hidden container w-full flex justify-center px-12 mb-3 relative z-20 shrink-0">
+      <div className="md:hidden container w-full flex justify-center px-12 mb-6 relative z-20 shrink-0">
         <StackHeading />
       </div>
 
       {/* Desktop: position StackHeading under the Navigate button (calculates horizontal center) */}
-      <div className="hidden md:block absolute left-0 right-0 z-20 pointer-events-none" style={{ top: 'calc(var(--header-height,5rem) + 0.5rem)' }}>
+      <div className="hidden md:block absolute left-0 right-0 z-20 pointer-events-none" style={{ top: 'calc(var(--header-height,5rem) + 1.25rem)' }}>
         <div style={{ position: 'relative', width: '100%', height: 0 }}>
           <div
             style={{
@@ -368,7 +368,7 @@ export default function Hero() {
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-8rem)] max-md:min-h-[380px] md:min-h-[640px]"
+        className="w-full max-w-full relative z-10 shrink-0 max-md:h-[calc(100dvh-var(--header-height,4.5rem)-8rem)] max-md:min-h-[380px] md:min-h-[640px] mt-6 md:mt-8"
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
