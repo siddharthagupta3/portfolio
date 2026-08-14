@@ -128,23 +128,20 @@ const Projects = () => {
     <section id="projects" className="pt-8 pb-10">
       <div className="container text-center relative mx-auto px-4">
         <motion.div
-          className="text-center mb-20 sm:mb-10"
+          className="text-center mb-6 sm:mb-6"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
           variants={fadeInUpVariants}
         >
-          {/* Removed orange "Projects" section heading as requested */}
-          <div className="h-7"></div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gradient">Technical Projects</h2>
-          <div className="h-7"></div>
-          <div className="mx-auto mt-8 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
-            <p className="glass-card w-full max-w-2xl mx-auto text-l sm:text-l mt-8 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gradient">Technical Projects</h2>
+          <div className="mx-auto mt-4 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
+            <p className="glass-card w-full max-w-2xl mx-auto text-l sm:text-l mt-4 text-clear flex justify-center items-center text-center" style={{ color: 'var(--primary)' }}>
               Feel free to reach out for collaborations, questions, or just to say hello! I&apos;ll do my best to get back to you.
             </p>
           </div>
         </motion.div>
-        <div className="h-10"></div>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProjects.map((project, index) => (
             <motion.div
