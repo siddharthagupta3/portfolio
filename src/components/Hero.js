@@ -304,13 +304,13 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen relative bg-[#0a0a0a] text-white overflow-hidden flex flex-col items-center justify-center pt-20"
+      className="relative bg-black text-white overflow-x-hidden flex flex-col items-center pt-20 pb-8 md:pb-10"
     >
       {/* Background glow */}
       <div className="absolute w-[500px] h-[500px] bg-orange-600/5 rounded-full blur-[140px] pointer-events-none" />
 
       {/* Header */}
-      <div className="absolute top-28 z-20 flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none">
+      <div className="relative z-20 flex items-center gap-4 text-gray-400 tracking-[0.2em] text-xs md:text-sm font-light select-none mt-8 mb-4 md:mt-10 md:mb-6">
         <div className="w-8 h-px bg-gray-600" />
         <span>
           OUR STACK <span className="text-[#ff6200] font-bold">•</span> 30+ TOOLS
@@ -320,7 +320,7 @@ export default function Hero() {
       {/* Graph */}
       <div
         ref={containerRef}
-        className="w-full h-[72vh] md:h-[78vh] relative z-10 touch-none"
+        className="w-full max-w-full min-h-[460px] sm:min-h-[500px] md:min-h-[640px] relative z-10"
       >
         {/* Connections */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none overflow-visible">
@@ -361,7 +361,7 @@ export default function Hero() {
                   nodeRefs.current[node.id] = element;
                 }
               }}
-              className="absolute top-0 left-0 flex items-center justify-center rounded-full bg-[#111111] cursor-grab active:cursor-grabbing select-none will-change-transform overflow-hidden"
+              className="absolute top-0 left-0 flex items-center justify-center rounded-full bg-[#111111] cursor-grab active:cursor-grabbing select-none will-change-transform overflow-hidden touch-none"
               style={{
                 width: currentRadius * 2,
                 height: currentRadius * 2,
@@ -406,7 +406,7 @@ export default function Hero() {
       </div>
 
       {/* Footer */}
-      <div className="absolute bottom-8 md:bottom-10 z-20 flex items-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none">
+      <div className="relative z-20 flex items-center gap-4 text-gray-500 tracking-[0.2em] text-[10px] md:text-xs select-none mt-4 md:mt-6">
         DRAG <span className="text-[#ff6200]">•</span> HOVER TO EXPLORE
       </div>
     </section>
